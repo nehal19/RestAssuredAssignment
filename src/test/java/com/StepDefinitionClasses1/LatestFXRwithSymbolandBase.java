@@ -26,15 +26,15 @@ public class LatestFXRwithSymbolandBase {
 
 	@Then("Verify that the status code of response is {int}")
 	public void validateStatusCode(Integer int1) {
+		//Asserting Status Code
 	    Assert.assertEquals(int1.intValue(), response.getStatusCode());
 	}
 
 	@And("Verify that the version of HTTP is {double}")
 	public void validateStatusLine(Double double1) {
+	    //Asserting Status Line
 	    Assert.assertTrue(response.getStatusLine().contains(double1.toString()));
-	    System.out.println("Symbol and Base open");
-	    System.out.println(response.prettyPrint());
-	    System.out.println("Symbol and Base close");
+	   
 	}
 	
 

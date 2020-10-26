@@ -28,13 +28,11 @@ public class LatestForiegnExchangeRates {
 
 	@Then("^Verify that the status code of the response is success$")
 	public void validate() throws Throwable {
+		//Getting Status Line
 	    System.out.println(response.getStatusLine());
+	    //Asserting status code
 		Assert.assertEquals(200, response.getStatusCode());
-		 System.out.println("open");
-		    System.out.println(response.prettyPrint());
-		    System.out.println("close");
-
-		
+		 
 	}
 	
 	

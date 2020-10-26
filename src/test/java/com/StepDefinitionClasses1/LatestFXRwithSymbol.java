@@ -28,10 +28,9 @@ public class LatestFXRwithSymbol {
 
 	@Then("Verify that the status code of the response is {int}")
 	public void validate(Integer int1) {
+		//Asserting Status Code
 	    Assert.assertEquals(int1.intValue(), response.getStatusCode());
-	    System.out.println("Base open");
-	    response.prettyPrint();
-	    System.out.println("Base close");
+	   
 	    
 	}
 }

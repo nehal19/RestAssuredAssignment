@@ -27,11 +27,13 @@ private Response response;
 	}
 	@Then("Verify that the response body with symbol and base has base as {string}")
 	public void validateBase(String base1) {
+		//Assert whether Base is same
 	    Assert.assertTrue(response.getBody().asString().contains(base1));
 	}
 	@And("Verify that it contains rates of GBP")
 	public void validateRates() {
 		RateswithSymbolandBase ratesofCountries = response.as(RateswithSymbolandBase.class,ObjectMapperType.GSON);
+		//Asserting if response has rates of GBP
 		Assert.assertTrue(ratesofCountries.getRates().getGBP()>0);
 		
 	}

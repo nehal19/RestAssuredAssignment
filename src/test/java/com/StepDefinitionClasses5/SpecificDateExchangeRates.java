@@ -31,12 +31,15 @@ private Response response;
 	
 	@Then("Verify that  the response body has base as {string}")
 	public void validateBase(String base) {
+		//Assert whether Base is same
 	    Assert.assertTrue(response.getBody().asString().contains(base));
 	}
 	
 	@And("Verify that the rate of INR is greater than {int}")
 	public void validateRates(Integer int1) {
+	
 	RatesSpecificFXR ratesofCountries = response.as(RatesSpecificFXR.class,ObjectMapperType.GSON);
+	//Asserting if response has rates of India
 	Assert.assertTrue(ratesofCountries.getRates().getINR()>int1);
 	   
 	   

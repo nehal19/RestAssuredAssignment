@@ -25,10 +25,9 @@ public class LatestFXRwithBase {
 
 	@Then("Verify that the status line of the response is {string}")
 	public void validate(String string) {
+		//Getting Status Line
 		System.out.println(response.getStatusLine());
+		//Asserting Status Line
 	    Assert.assertEquals(string, response.getStatusLine());
-	    System.out.println("Symbol open");
-	    System.out.println(response.prettyPrint());
-	    System.out.println("Symbol Close");
 	}
 }

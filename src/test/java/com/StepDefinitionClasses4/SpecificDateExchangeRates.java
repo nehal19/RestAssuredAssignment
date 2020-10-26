@@ -21,19 +21,19 @@ public class SpecificDateExchangeRates {
 
 	@When("^The API is available$")
 	public void invokeAPI() throws Throwable{
-	    
+	   
 		response = RestAssured.get("/api/2010-01-12");
 		
 	}
 
 	@Then("^Verify that the status code of the response is success$")
 	public void validate() throws Throwable {
+		//Getting Status Line
 	    System.out.println(response.getStatusLine());
+	    //Asserting Status Code
 		Assert.assertEquals(200, response.getStatusCode());
-		    System.out.println(response.prettyPrint());
-		    
-
-		
+	    
 	}
+
 	
 }

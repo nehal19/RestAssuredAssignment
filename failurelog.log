@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-10-26T19:37:45.893975900Z</date>
+  <millis>1603741065893</millis>
+  <nanos>975900</nanos>
+  <sequence>0</sequence>
+  <logger>LatestForeignExchangeRates</logger>
+  <level>INFO</level>
+  <class>com.StepDefinitionClasses3.LatestForeignExchangeRates</class>
+  <method>validate</method>
+  <thread>1</thread>
+  <message>{
+    "error": "time data 'api' does not match format '%Y-%m-%d'"
+}</message>
+</record>
+</log>
